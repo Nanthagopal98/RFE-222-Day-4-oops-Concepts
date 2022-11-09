@@ -1,9 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using OopsConcepts.Abstraction;
+using OopsConcepts.Encapsulation;
 using OopsConcepts.Inheritance;
 using OopsConcepts.Polymorphism;
 
-Console.WriteLine("1:Inheritance\n2:Abstraction\n3:Polymorphism-Overloading\n4:Polymorphism-Overriding");
+Console.WriteLine("1:Inheritance\n2:Abstraction\n3:Polymorphism-Overloading\n4:Polymorphism-Overriding\n5:Encapsulation");
 int option = Convert.ToInt32(Console.ReadLine());
 switch (option) 
 {
@@ -37,8 +38,17 @@ switch (option)
     case 4:
         Child child = new Child();
         child.Sample();
-        //child = new OverRiding();
-
+        break;
+    case 5:
+        Console.WriteLine("Enter Balance");
+        int abalance = Convert.ToInt32(Console.ReadLine());
+        Transaction transaction = new Transaction();
+        transaction.SetBalance(abalance);
+        transaction.GetBalance();
+        Console.WriteLine("Enter Accouunt Number");
+        int Acc = Convert.ToInt32(Console.ReadLine());
+        transaction.Amount = Acc;
+        transaction.PanNumber = 12345;
         break;
 }
 

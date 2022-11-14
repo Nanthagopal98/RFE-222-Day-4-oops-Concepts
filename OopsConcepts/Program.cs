@@ -1,10 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using OopsConcepts;
 using OopsConcepts.Abstraction;
 using OopsConcepts.Encapsulation;
 using OopsConcepts.Inheritance;
 using OopsConcepts.Polymorphism;
 
-Console.WriteLine("1:Inheritance\n2:Abstraction\n3:Polymorphism-Overloading\n4:Polymorphism-Overriding\n5:Encapsulation");
+Console.WriteLine("1:Inheritance\n2:Abstraction\n3:Polymorphism-Overloading\n4:Polymorphism-Overriding\n5:Encapsulation" +
+    "\n6:Flip Coin");
 int option = Convert.ToInt32(Console.ReadLine());
 switch (option) 
 {
@@ -49,6 +51,10 @@ switch (option)
         int Acc = Convert.ToInt32(Console.ReadLine());
         transaction.Amount = Acc;
         transaction.PanNumber = 12345;
+        break;
+    case 6:
+        LogicalPrograms logicalPrograms = new LogicalPrograms();
+        logicalPrograms.FlipCoin();
         break;
 }
 
